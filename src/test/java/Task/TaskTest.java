@@ -87,4 +87,11 @@ class TaskTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void testEqualsWithDifferentClass() {
+        Task task = new Task(1);
+        Object obj = new Object();
+        assertFalse(task.equals(obj));
+    }
+
 }
